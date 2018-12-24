@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 import { ICustomer, IOrder } from '../../app/shared/interfaces';
+
 @Injectable()
 export class DataService {
 
@@ -14,11 +15,9 @@ export class DataService {
 
 	getCustomers() : Observable<ICustomer[]> {
 		return this.http.get<ICustomer[]>(this.baseUrl + 'customers.json')
-			.pipe (
+			.pipe(
 				catchError(this.handleError)
-
 			);
-
 	}
 
 	getCustomer(id: number) : Observable<ICustomer> {
@@ -42,6 +41,7 @@ export class DataService {
 				catchError(this.handleError)
 			);
 	}
+
 
 	private handleError(error: any) {
 		console.error('server error:', error);

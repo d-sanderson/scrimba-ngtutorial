@@ -22,5 +22,10 @@
     "name": "Tina Adams",
     "city": "Seattle",
     "orderTotal": 15.99
+  },
+  { "id": 5,
+    "name": "David Sanderson",
+    "city": "New Mexico",
+    "orderTotal": 88.88
   }
 ]
