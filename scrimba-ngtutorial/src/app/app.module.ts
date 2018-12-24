@@ -7,10 +7,11 @@ import { CoreModule } from "./core/core.module";
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
+import {OrdersModule} from "./orders/orders.module";
 
 
 @NgModule({
-   imports: [ BrowserModule, HttpClientModule, CustomersModule, SharedModule, CoreModule, AppRoutingModule ],
+   imports: [ BrowserModule, HttpClientModule, CustomersModule, SharedModule, CoreModule, AppRoutingModule, OrdersModule ],
    declarations: [ AppComponent ],
    bootstrap: [ AppComponent ],
 })
